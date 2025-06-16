@@ -38,119 +38,102 @@ Este projeto é uma aplicação web desenvolvida em Laravel que simula uma carte
 
 ---
 
-## 📄 Como Rodar o Projeto
+## ⚙️ Instalação
 
-### 🐳 Usando Docker (Recomendado)
+### Usando Docker (Recomendado)
 
-1. Clone o repositório:
+1. **Clone o repositório**
+    ```bash
+    git clone https://github.com/seu-usuario/carteira-digital.git
+    cd carteira-digital
+    ```
 
-\`\`\`bash
-git clone https://github.com/seu-usuario/carteira-digital.git
-cd carteira-digital
-\`\`\`
+2. **Crie o arquivo `.env`**
+    ```bash
+    cp .env.example .env
+    ```
 
-2. Crie o arquivo \`.env\`:
+3. **Configure as variáveis de ambiente no `.env`**
+    ```
+    DB_CONNECTION=pgsql
+    DB_HOST=postgres
+    DB_PORT=5432
+    DB_DATABASE=walletcobuccio
+    DB_USERNAME=userwallet
+    DB_PASSWORD=adminteste
+    ```
 
-\`\`\`bash
-cp .env.example .env
-\`\`\`
+4. **Suba os containers Docker**
+    ```bash
+    docker-compose up -d
+    ```
 
-3. Configure as variáveis de ambiente no arquivo \`.env\`, por exemplo:
+5. **Instale as dependências do PHP**
+    ```bash
+    docker-compose run --rm composer install
+    ```
 
-\`\`\`
-DB_CONNECTION=pgsql
-DB_HOST=postgres
-DB_PORT=5432
-DB_DATABASE=carteirafinanceira
-DB_USERNAME=carteirauser
-DB_PASSWORD=carteirapassword
-\`\`\`
+6. **Gere a chave da aplicação**
+    ```bash
+    docker-compose run --rm artisan key:generate
+    ```
 
-4. Suba os containers Docker:
+7. **Execute as migrações e seeders**
+    ```bash
+    docker-compose run --rm artisan migrate --seed
+    ```
 
-\`\`\`bash
-docker-compose up -d
-\`\`\`
+8. **Crie o link simbólico do storage**
+    ```bash
+    docker-compose run --rm artisan storage:link
+    ```
 
-5. Instale as dependências PHP:
+9. **Ajuste as permissões do storage**
+    ```bash
+    docker exec -it laravel-app chown -R www-data:www-data /var/www/storage
+    ```
 
-\`\`\`bash
-docker-compose run --rm composer install
-\`\`\`
+10. **Instale as dependências do Node.js**
+    ```bash
+    docker-compose run --rm npm install
+    ```
 
-6. Gere a chave da aplicação:
-
-\`\`\`bash
-docker-compose run --rm artisan key:generate
-\`\`\`
-
-7. Execute as migrações e seeders:
-
-\`\`\`bash
-docker-compose run --rm artisan migrate --seed
-\`\`\`
-
-8. Crie o link simbólico do storage:
-
-\`\`\`bash
-docker-compose run --rm artisan storage:link
-\`\`\`
-
-9. Ajuste permissões no storage:
-
-\`\`\`bash
-docker exec -it laravel-app chown -R www-data:www-data /var/www/storage
-\`\`\`
-
-10. Instale as dependências Node.js:
-
-\`\`\`bash
-docker-compose run --rm npm install
-\`\`\`
-
-11. Compile os assets:
-
-\`\`\`bash
-docker-compose run --rm npm run build
-\`\`\`
+11. **Compile os assets**
+    ```bash
+    docker-compose run --rm npm run build
+    ```
 
 ---
 
 ### Instalação Manual (Sem Docker)
 
-1. Clone o repositório:
+1. **Clone o repositório**
+    ```bash
+    git clone https://github.com/seu-usuario/carteira-digital.git
+    cd carteira-digital
+    ```
 
-\`\`\`bash
-git clone https://github.com/seu-usuario/carteira-digital.git
-cd carteira-digital
-\`\`\`
+2. **Crie o arquivo `.env`**
+    ```bash
+    cp .env.example .env
+    ```
 
-2. Crie o arquivo \`.env\`:
+3. **Instale as dependências do PHP**
+    ```bash
+    composer install
+    ```
 
-\`\`\`bash
-cp .env.example .env
-\`\`\`
+4. **Gere a chave da aplicação**
+    ```bash
+    php artisan key:generate
+    ```
 
-3. Instale as dependências PHP:
+5. **Execute as migrações e seeders**
+    ```bash
+    php artisan migrate --seed
+    ```
 
-\`\`\`bash
-composer install
-\`\`\`
-
-4. Gere a chave da aplicação:
-
-\`\`\`bash
-php artisan key:generate
-\`\`\`
-
-5. Execute as migrações e seeders:
-
-\`\`\`bash
-php artisan migrate --seed
-\`\`\`
-
-6. Inicie o servidor:
-
-\`\`\`bash
-php artisan serve
-\`\`\`
+6. **Inicie o servidor**
+    ```bash
+    php artisan serve
+    ```
