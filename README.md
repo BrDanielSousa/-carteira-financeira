@@ -45,8 +45,8 @@ Este projeto é uma aplicação web desenvolvida em Laravel que simula uma carte
 
 1. **Clone o repositório**
     ```bash
-    git clone https://github.com/seu-usuario/carteira-digital.git
-    cd carteira-digital
+    git clone https://github.com/BrDanielSousa/carteira-financeira.git
+    cd carteira-financeira
     ```
 
 2. **Crie o arquivo `.env`**
@@ -110,8 +110,8 @@ Este projeto é uma aplicação web desenvolvida em Laravel que simula uma carte
 
 1. **Clone o repositório**
     ```bash
-    git clone https://github.com/seu-usuario/carteira-digital.git
-    cd carteira-digital
+    git clone https://github.com/BrDanielSousa/carteira-financeira.git
+    cd carteira-financeira
     ```
 
 2. **Crie o arquivo `.env`**
