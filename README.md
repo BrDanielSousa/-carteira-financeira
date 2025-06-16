@@ -1,5 +1,5 @@
 
-# Carteira Digital – Desafio Full Stack
+# Carteira Financeira – Desafio Full Stack
 **Grupo Adriano Cobuccio**
 
 Este projeto é uma aplicação web desenvolvida em Laravel que simula uma carteira financeira com suporte a três tipos de transações: depósito, transferência entre carteiras e reversão de transações.
