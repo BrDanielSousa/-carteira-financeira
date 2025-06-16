@@ -91,7 +91,7 @@ Este projeto é uma aplicação web desenvolvida em Laravel que simula uma carte
 
 9. **Ajuste as permissões do storage**
     ```bash
-    docker exec -it laravel-app chown -R www-data:www-data /var/www/storage
+    docker exec -it carteira-financeira-app chown -R www-data:www-data /var/www/storage
     ```
 
 10. **Instale as dependências do Node.js**
