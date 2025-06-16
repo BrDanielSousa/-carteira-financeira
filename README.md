@@ -1,5 +1,6 @@
 
-# 💸 Carteira Virtual com Transações (Depósito, Transferência e Reversão)
+# Carteira Digital – Desafio Full Stack
+**Grupo Adriano Cobuccio**
 
 Este projeto é uma aplicação web desenvolvida em Laravel que simula uma carteira financeira com suporte a três tipos de transações: depósito, transferência entre carteiras e reversão de transações.
 
@@ -58,9 +59,9 @@ Este projeto é uma aplicação web desenvolvida em Laravel que simula uma carte
     DB_CONNECTION=pgsql
     DB_HOST=postgres
     DB_PORT=5432
-    DB_DATABASE=walletcobuccio
-    DB_USERNAME=userwallet
-    DB_PASSWORD=adminteste
+    DB_DATABASE=carteirafinanceira
+    DB_USERNAME=carteirauser
+    DB_PASSWORD=carteirapassword
     ```
 
 4. **Suba os containers Docker**
